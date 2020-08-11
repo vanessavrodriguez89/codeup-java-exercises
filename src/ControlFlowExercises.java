@@ -9,7 +9,7 @@ public class ControlFlowExercises {
 //        }
 
 //        TODO Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
-//        int i = 2;
+//        int i = 0;
 //        do {
 //            System.out.println("i is " + i);
 //            i += 2;
@@ -32,7 +32,7 @@ public class ControlFlowExercises {
 //        } while (i <= 1000000);
 
 
-//    TODO Refactor the previous two exercises to use a for loop instead.
+//       TODO Refactor the previous two exercises to use a for loop instead.
 
 //        long i;
 //        for(i = 2L; i < 1000000; i*=i) {
@@ -100,7 +100,7 @@ public class ControlFlowExercises {
 
 
 
-}
+    }
 }
 
 
