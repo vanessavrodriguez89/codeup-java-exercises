@@ -13,6 +13,7 @@ public class MethodsExercises {
 //        int userInput = getInteger(10, 20));
 //        factorial();
 //        System.out.println(factorialUsingForLoop(5));
+        diceGame();
 
     }
 
@@ -75,23 +76,32 @@ public class MethodsExercises {
     }
 
 //    TODO Create an application that simulates dice rolling.
-//    public static void diceRoll(){
-//        Scanner diceScan = new Scanner(System.in);
-//        System.out.print("Enter the number of sides for a pair of dice: ");
-//        int sidesToRoll = diceScan.nextInt();
-//
-//        System.out.print("\nReady to roll? y/n");
-//        String readyToRoll = diceScan.nextLine();
-//
-//        if (readyToRoll.equalsIgnoreCase("y")){
-//            Random numb = new Random();
-//
-//        }
-//
-//    }
 
+    public static int diceRoll (int a) {
+        Random numb = new Random();
+        return numb.nextInt(a) + 1;
+    }
 
-//    TODO GAME DEVELOPMENT 101
+    public static void diceGame(){
+        Scanner diceScan = new Scanner(System.in);
+        System.out.print("Enter the number of sides for a pair of dice: ");
+        int sidesToRoll = diceScan.nextInt();
+
+        System.out.print("Ready to roll? y/n ");
+        String readyToRoll = diceScan.next();
+
+        if (readyToRoll.equalsIgnoreCase("y")){
+            int firstDice = diceRoll(sidesToRoll);
+            int secondDice = diceRoll(sidesToRoll);
+            System.out.println("You rolled a " + firstDice + " and " + secondDice + " which makes a sum of " + (firstDice+secondDice));
+            System.out.print("Would you like to play again? y/n ");
+            String keepGoing = diceScan.next();
+            if (keepGoing.equalsIgnoreCase("y")) {
+                diceGame();
+            }
+        }
+
+    }
 
 
 
