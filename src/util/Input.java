@@ -153,6 +153,12 @@ public class Input {
         return input;
     }
 
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        int input = Integer.parseInt(prompt);
+        return input;
+    }
+
     public double getDouble() {
         return scanner.nextDouble();
     }
