@@ -16,7 +16,6 @@ public class MoviesApplication {
         System.out.println("3 - view movies in the drama category");
         System.out.println("4 - view movies in the horror category");
         System.out.println("5 - view movies in the sci-fi category");
-        System.out.println("6 - Search for a Title\n");
         System.out.print("Enter your numbered choice: ");
         choice = scan.getInt();
 
@@ -32,47 +31,16 @@ public class MoviesApplication {
                     break;
 
                 case 2:
-                    for (Movie movie : movieList) {
-                        if(movie.getCategory().equals("animated")) {
-                            System.out.println(movie.getName());
-                        }
-                    }
-                    System.out.println();
+                    Movie.getCategory("animated");
                     break;
                 case 3:
-                    for (Movie movie : movieList) {
-                        if(movie.getCategory().equals("drama")) {
-                            System.out.println(movie.getName());
-                        }
-                    }
-                    System.out.println();
+                    Movie.getCategory("drama");
                     break;
                 case 4:
-                    for (Movie movie : movieList) {
-                        if(movie.getCategory().equals("horror")) {
-                            System.out.println(movie.getName());
-                        }
-                    }
-                    System.out.println();
+                    Movie.getCategory("horror");
                     break;
                 case 5:
-                    for (Movie movie : movieList) {
-                        if(movie.getCategory().equals("scifi")) {
-                            System.out.println(movie.getName());
-                        }
-                    }
-                    System.out.println();
-                    break;
-                case 6:
-                    System.out.println("What is the title of the movie you are searching for? ");
-                    String entry = scan.getString();
-                    System.out.println();
-                    for (Movie movie : movieList) {
-                        if(movie.getName().contains(entry)) {
-                            System.out.println(movie.getName());
-                        }
-                    }
-                    System.out.println();
+                    Movie.getCategory("scifi");
                     break;
             }
 

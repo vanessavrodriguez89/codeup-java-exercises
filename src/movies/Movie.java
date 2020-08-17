@@ -22,7 +22,17 @@ public class Movie {
     }
 
     public String getCategory() {
+
         return category;
+    }
+
+    public static void getCategory(String genre){
+        for (Movie movie : MoviesArray.findAll()) {
+            if(movie.getCategory().equals(genre)) {
+                System.out.println(movie.getName());
+            }
+        }
+        System.out.println();
     }
 
     public void setCategory(String category) {
