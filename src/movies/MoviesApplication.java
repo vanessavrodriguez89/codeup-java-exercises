@@ -1,10 +1,10 @@
 package movies;
-import java.util.Scanner;
+import util.Input;
 
 public class MoviesApplication {
     public static void main(String[] args) {
         Movie[] movieList = MoviesArray.findAll();
-        Scanner scan = new Scanner(System.in);
+        Input scan = new Input();
 
         int choice;
         do {
@@ -18,7 +18,7 @@ public class MoviesApplication {
         System.out.println("5 - view movies in the sci-fi category");
         System.out.println("6 - Search for a Title\n");
         System.out.print("Enter your numbered choice: ");
-        choice = scan.nextInt();
+        choice = scan.getInt();
 
             switch (choice) {
                 case 0:
@@ -65,16 +65,17 @@ public class MoviesApplication {
                     break;
                 case 6:
                     System.out.println("What is the title of the movie you are searching for? ");
-                    String entry = scan.nextLine();
-                    scan.nextLine();
+                    String entry = scan.getString();
+                    System.out.println();
                     for (Movie movie : movieList) {
-                        if(movie.getName().asList().contains(entry)) {
+                        if(movie.getName().contains(entry)) {
                             System.out.println(movie.getName());
                         }
                     }
                     System.out.println();
                     break;
             }
-        } while (choice != 0);
+
+        } while (scan.yesNo());
     }
 }
