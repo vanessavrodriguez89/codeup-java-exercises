@@ -7,19 +7,19 @@ public class Rectangle extends Quadrilateral implements Measurable {
     }
 
     @Override
-    public void setLength(){
-
+    public void setLength(int length){
+        this.length = length;
     }
 
     @Override
-    public void setWidth(){
-
+    public void setWidth(int width){
+        this.width = width;
     }
 
 
     @Override
     public int getPerimeter() {
-        return (2 * length) + (2 * width);
+        return 2 * (length + width);
     }
 
     @Override
