@@ -11,7 +11,7 @@ public class Input {
         return scanner.next().toLowerCase();
     }
     public boolean yesNo() {
-        System.out.print("Do you want to continue inputting a number? ");
+//        System.out.print("Do you want to continue inputting a number? ");
         String input = getString();
         if (input.equals("y") || input.equals("yes")) {
             return true;
