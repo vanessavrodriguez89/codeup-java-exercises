@@ -4,7 +4,6 @@ import util.Input;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class GradesApplication {
     public static void main(String[] args) {
@@ -57,7 +56,7 @@ public class GradesApplication {
                 Student name = students.get(studentSelection);
                 ArrayList grades = name.studentGrades;
                 System.out.println("Name: " + name.getStudentName() + " - GitHub Username: " + studentSelection);
-                System.out.println("Grades: " + grades.toString());
+                System.out.println("Grades: " + grades);
                 System.out.println("Current Average: " + name.getGradeAverage());
                 System.out.print("Would you like to see another student?(y/n)\n> ");
             } else System.out.print("Sorry, no student found with the GitHub username of \"" + studentSelection + "\".\n Would you like to see another student?(y/n)\n> ");
